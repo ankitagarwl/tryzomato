@@ -15,9 +15,6 @@ namespace tryzomato.Controllers
 {
     public class CategoryController : Controller
     {
-
-
-
         
         // GET: Category
 
@@ -58,7 +55,6 @@ namespace tryzomato.Controllers
                 client.DefaultRequestHeaders.Add("user-key", "56fdd28b4835a8f484612f78f06ae582");
                 var response = await client.GetStringAsync(url);
                 RootObject_hotellist list = JsonConvert.DeserializeObject<RootObject_hotellist>(response);
-                //list.categoryname = categoryname;
                 return View(list);
             }
 
@@ -72,7 +68,6 @@ namespace tryzomato.Controllers
                 client.DefaultRequestHeaders.Add("user-key", "56fdd28b4835a8f484612f78f06ae582");
                 var response = await client.GetStringAsync(url);
                 RootObject_restaurant list = JsonConvert.DeserializeObject<RootObject_restaurant>(response);
-                //list.categoryname = categoryname;
                 return View(list);
             }
 
