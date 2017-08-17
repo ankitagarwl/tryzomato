@@ -1,0 +1,18 @@
+﻿@Model List<Category>
+    @{
+        ViewBag.Title = "Index";
+    }
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+   
+    <h2>Select Category</h2>
+
+    @{
+        foreach (Category c in Model)
+        {
+            <a name="button" class="btn btn-info" href="@Url.Action("HotelList", new { categoryid=c.categories.id,categoryname= c.categories.name })" style="width:200px;height:200px; margin-left:5px;margin-right:5px;margin-top:5px;margin-bottom:5px;"  >@c.categories.name </a>
+            
+        }
+     }
+
+          
+    
