@@ -1,6 +1,7 @@
 ﻿<div class="ui dimmer modals page transition visible active" style="display: block !important;">
     <div id="modal-container" class="ui modal transition visible active scrolling" style="margin-left: -225px; display: block !important; height: auto; width: 450px; top: 0px;">
-        <i class="close icon"></i><div class="header">Sign up or log in to Zomato</div><div class="content">
+        <i class="close icon"></i><div class="header">Sign up or log in to Zomato</div>
+        <div class="content">
             <div class="column clearfix">
                 <div class="hidden login-section login-form-dialog" id="login-form-dialog">
                     <span class="hidden" id="login-section-heading-login-form-dialog">Log in to Zomato</span>
@@ -229,6 +230,35 @@
            // alert('aaa');
             $("#modalfill").css('display', 'none');
         });
+        $("#login-email").click(function () {
+            
+            $("#modalfill").css('display', 'block');
+            $("#login-home").css('display', 'none');
+            $("#ld-reset-password").css('display', 'none');
+            $("#login-form-dialog").css('display', 'block');
+            $("#login-form-dialog").removeClass('hidden');
+            $("#signup-form").css('display', 'none');
+            $("#ld-login-not-verified").css('display', 'none');
+            $("#signup-verif-container").css('display', 'none');
+           // $(".signup-verif-success hidden login-section ta-center").css('display', 'none');
+            
+        });
+        $("#signup-email").click(function () {
+
+            $("#modalfill").css('display', 'block');
+            $("#login-form-dialog").css('display', 'none');
+            $("#login-home").css('display', 'none');
+            $("#ld-reset-password").css('display', 'none');
+            $("#signup-form").css('display', 'block');
+            $("#signup-form").removeClass('hidden');
+            $("#login-form-dialog").addClass('hidden');
+            $("#ld-login-not-verified").css('display', 'none');
+            $("#signup-verif-container").css('display', 'none');
+            // $(".signup-verif-success hidden login-section ta-center").css('display', 'none');
+
+        });
+
+        
 
 
 
