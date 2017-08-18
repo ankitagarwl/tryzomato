@@ -1,0 +1,238 @@
+﻿<div class="ui dimmer modals page transition visible active" style="display: block !important;">
+    <div id="modal-container" class="ui modal transition visible active scrolling" style="margin-left: -225px; display: block !important; height: auto; width: 450px; top: 0px;">
+        <i class="close icon"></i><div class="header">Sign up or log in to Zomato</div><div class="content">
+            <div class="column clearfix">
+                <div class="hidden login-section login-form-dialog" id="login-form-dialog">
+                    <span class="hidden" id="login-section-heading-login-form-dialog">Log in to Zomato</span>
+                    <div id="ld-message" class="ui error message error-message-highlight-small mbot hidden">&nbsp;</div>
+                    <form method="POST" class="ui form ld-form" id="ld-form-global" data-store-cookie-session="false">
+                        <div class="field">
+                            <div class="fontsize4 ui header">Email / Zomato Username</div>
+                            <div class="ui icon fluid input">
+                                <input type="text" id="ld-email" class="zomato-form-input-plain">
+                                <i class="mail icon"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="fontsize4 ui header">Password</div>
+                            <div class="ui  icon fluid input">
+                                <input type="password" id="ld-password" placeholder="" class="zomato-form-input-plain">
+                                <i class="lock icon"></i>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <div class="ui checkbox left">
+                                <input type="checkbox" id="ld-remember" name="remember" value="off" checked="">
+                                <label>Remember me</label>
+                            </div>
+                            <div class="right">
+                                <a class="ld-forgotpass zred" href="#">Forgot password?</a>
+                            </div>
+                        </div>
+                        <div class="ptop">
+                            <!--  <input type="button"  id="ld-login-back" class="ui button left" value="&lsaquo; Back" /> -->
+                            <input type="submit" id="ld-submit-global" class="zomato-form-button login-submit-btn ui red massive button fluid" value="Log in">
+                        </div>
+
+                        <div class="clear"></div>
+                        <div class="tos-disclaimer">
+                            By logging in, you agree to Zomato's <a href="https://www.zomato.com/conditions">Terms of Service</a>, <a href="https://www.zomato.com/cookiepolicy">Cookie Policy</a>, <a href="https://www.zomato.com/privacy">Privacy Policy</a> and <a href="https://www.zomato.com/policies">Content Policies</a>.
+                        </div>
+                    </form>
+                </div>
+
+                <div id="login-home" class="login-section login-home">
+                    <span class="hidden" id="login-section-heading-login-home">Log in to Zomato</span>
+                    <div id="login-social" class="ta-center">
+                        <div class="twitter-dep-message hidden ui error message error-message-highlight-small mbot"></div>
+                        <div class="mbot" title="Log in with Facebook">
+                            <a href="#" id="facebook-login-global" data-store-cookie-session="false" data-reload="true" class="ui massive facebook fluid labeled icon button facebook-login mb5">
+                                <i class="facebook icon"></i>
+                                <span class="fontsize3">Continue with Facebook</span>
+                            </a>
+                        </div>
+                        <div id="customBtn" title="Log in with Google">
+                            <a href="#" class="ui basic fluid massive button zs-google-connect-btn google-redirect-link pl20i">
+                                <img class="left" src="https://b.zmtcdn.com/images/new_google_icon.png">
+                                <span class="fontsize3">Continue with Google</span>
+                            </a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="ui horizontal divider">
+                        or
+                    </div>
+                    <div id="login-nonsocial" class="ta-center">
+                        <div class="ui header fontsize2">Or use your email address</div>
+                        <div class="row">
+                            <div class="col-l-8">
+                                <a class="ui button red fluid massive login-icons ld-small" href="#" id="login-email">
+                                    <span class="fontsize3">Log in</span>
+                                </a>
+                            </div>
+                            <div class="col-l-8">
+                                <a class="ui button massive basic fluid login-icons ld-small" href="#" id="signup-email">
+                                    <span class="fontsize3">Sign up</span>
+                                </a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+
+                    <div class="tos-disclaimer">
+                        By logging in, you agree to Zomato's <a href="https://www.zomato.com/conditions">Terms of Service</a>, <a href="https://www.zomato.com/cookiepolicy">Cookie Policy</a>, <a href="https://www.zomato.com/privacy">Privacy Policy</a> and <a href="https://www.zomato.com/policies">Content Policies</a>.
+                    </div>
+                </div>
+
+                <div id="ld-reset-password" class="hidden login-section ld-reset-password">
+                    <span class="hidden" id="login-section-heading-ld-reset-password">Forgot password?</span>
+                    <div id="reset-form-container">
+                        <span>Please enter the email address you signed up with and we'll send you a password reset link.</span>
+                        <div class="hidden mbot mtop"><div class="ui error message error-message-highlight-small mbot" id="reset-password-message">&nbsp;</div></div>
+
+                        <form id="rp-form" class="ui form">
+                            <div class="fontsize2 bold mt5 mb5">Email Address</div>
+                            <div class="ui icon fluid input">
+                                <input type="text" id="reset-password-email" value="" class="zomato-form-input-plain">
+                                <i class="mail icon"></i>
+                            </div>
+
+                            <div class="mtop">
+                                <!--  <input type="button" id="forgot-password-back" value="&lsaquo; Back" class="ui button left" /> -->
+                                <input type="submit" id="reset-password-submit" value="Reset password" class="ui button red fluid">
+                            </div>
+                        </form>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+                <div class="hidden login-section signup-form" id="signup-form">
+                    <span class="hidden" id="login-section-heading-signup-form">Register</span>
+
+                    <div class="zomato-form-error ui error message error-message-highlight-small mbot hidden" id="sd-error"></div>
+                    <form class="sd-form ui form" method="POST" id="sd-form-global" data-store-cookie-session="false">
+                        <div class="field">
+                            <div class="fontsize4 ui header">Full Name</div>
+                            <div class="ui icon fluid input">
+                                <input type="text" id="sd-fullname" name="fullname" class="zomato-form-input-plain">
+                                <i class="user icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="fontsize4 ui header">Email Address</div>
+                            <div class="ui icon fluid input">
+                                <input type="text" id="sd-email" name="email" class="zomato-form-input-plain">
+                                <i class="mail icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="fontsize4 ui header">Password</div>
+                            <div class="ui icon fluid input">
+                                <input type="password" id="sd-password" name="password" class="zomato-form-input-plain">
+                                <i class="lock icon"></i>
+                            </div>
+                        </div>
+                        <div class="ui checkbox">
+                            <input type="checkbox" style="margin-right: 5px;" id="sd-newsletter" name="newsletter" value="1">
+                            <label for="sd-newsletter">
+                                Send me occasional email updates
+                            </label>
+                        </div>
+                        <div class="clear mbot"></div>
+
+                        <!--  <a href="#" id="ld-signup-back" class="ui button left">&lsaquo; Back</a> -->
+                        <input type="submit" id="sd-submit" class="ui button red fluid" value="Register">
+                        <div class="clear"></div>
+                        <div class="tos-disclaimer">
+                            By creating an account, you agree to Zomato's <a href="https://www.zomato.com/conditions">Terms of Service</a>,  <a href="https://www.zomato.com/cookiepolicy">Cookie Policy</a>, <a href="https://www.zomato.com/privacy">Privacy Policy</a> and <a href="https://www.zomato.com/policies">Content Policies</a>.
+                        </div>
+                    </form>
+                    <div class="clear"></div>
+                    <div class="signup-form-loader hidden" style="position:absolute;top:60px;left:0;right:0;bottom:0;background-color:#fff;">
+                        <div class="ui loader"></div>
+                    </div>
+                </div>
+
+                <div class="hidden ta-center login-section" id="ld-login-not-verified">
+                    <span class="hidden" id="login-section-heading-ld-login-not-verified">Email Verification</span>
+                    <div id="resend-verification-email-before">
+                        <h5>You need to verify your email address to proceed.</h5>
+                        <p>Haven't got the verification email yet?</p>
+                        <input type="submit" class="ui button" id="resend-verification-email" value="Resend verification email">
+                        <button id="resend-verifcation-email-loading" class="ui button hidden"><img src="https://b.zmtcdn.com/images/floading.gif" class="mr10">Sending</button>
+                    </div>
+                    <div id="resend-verification-email-message" class="hidden"></div>
+                    <p class="ptop0 clearfix hidden resend-verification-email-code">
+                        <label class="label" for="signup-verif-code">Enter confirmation code</label>
+                        <input type="text" placeholder="e.g. 46A9" class="signup-verif-code">
+                        <input type="hidden" value="" class="signup-verif-uid">
+                        <a href="#" class="ui button signup-verif-submit">
+                            <span class="signup-verif-submit-text"> Go </span>
+                            <img src="https://b.zmtcdn.com/images/floading.gif" class="signup-verif-submit-loading hidden">
+                        </a>
+                    </p><div class="ui error message signup-verif-error error-message-highlight hidden"></div>
+                    <p></p>
+                    <div style="border-top: solid 1px #dedede" class="ptop mtop">
+                        <p>Log in with Facebook/Google to skip email verification</p>
+                        <div style="margin: 0 auto 20px; width: 290px;" title="Log in with Facebook">
+                            <a class="login-icons facebook-icon facebook-login label" href="#" id="facebook-login-global" data-store-cookie-session="false" data-reload="true">Connect with <span>Facebook</span></a>
+                        </div>
+                        <div id="customBtn3" style="margin: 0 auto; width: 290px;" title="Log in with Google">
+                            <a class="login-icons google-icon google-redirect-link label" href="#" data-reload="true">Connect with <span>Google</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signup-verif-success hidden login-section ta-center">
+                    <h5 class="signup-verif-container-head">Woot, woot!</h5>
+                    <p>Thank you for confirming your email address.</p>
+                    <input type="submit" value="Proceed" class="ui button signup-verif-success-proceed mtop">
+                </div>
+
+                <div class="ta-center signup-verif-container hidden login-section" id="signup-verif-container">
+                    <span class="hidden" id="login-section-heading-signup-verif-container">Email Verification</span>
+
+                    <div class="signup-verif-form">
+                        <h5 class="signup-verif-container-head">Thank you for signing up!</h5>
+                        <p>Check your inbox for a verification email<br> from Zomato. Please follow the instructions in that<br> email or enter your verification code below.</p>
+                        <p class="ptop0 clearfix">
+                        </p><div class="field mbot">
+                            <input type="text" placeholder="e.g. 46A9" id="signup-verif-code" class="signup-verif-code">
+                        </div>
+                        <input type="hidden" value="" class="signup-verif-uid">
+                        <a href="#" class="mtop ui button fluid massive red signup-verif-submit">
+                            <span class="signup-verif-submit-text fontsize3"> Go </span>
+                            <img src="https://b.zmtcdn.com/images/floading.gif" class="signup-verif-submit-loading hidden">
+                        </a>
+                        <div class="ui error message signup-verif-error error-message-highlight hidden"></div>
+                        <p></p>
+                        <div class="signup-verif-bottom-container">
+                            <p class="grey-text small-text ptop">If you have not received the verification email,<br> please check your spam folder.</p>
+                            <p class="grey-text small-text">Still no luck? <a href="#" class="signup-verif-resend-code zred">Resend verification email</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+
+        $(".close").click(function () {
+           // alert('aaa');
+            $("#modalfill").css('display', 'none');
+        });
+
+
+
+    });
+
+    
+</script>

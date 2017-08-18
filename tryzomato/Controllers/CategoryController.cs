@@ -73,6 +73,35 @@ namespace tryzomato.Controllers
 
         }
 
+        public async Task<ActionResult> sms()
+        {
+            Sendsms sendsms = new Sendsms();
+            sendsms.sendmsg();
+
+            using (var client = new HttpClient())
+            {
+                var url = "https://developers.zomato.com/api/v2.1/restaurant?res_id=" ; //city is static 1 for delhi,ncr
+                client.DefaultRequestHeaders.Add("user-key", "56fdd28b4835a8f484612f78f06ae582");
+                var response = await client.GetStringAsync(url);
+                RootObject_restaurant list = JsonConvert.DeserializeObject<RootObject_restaurant>(response);
+                return View(list);
+            }
+
+        }
+
+        public async Task<ActionResult> Login()
+        {
+           
+
+           
+                return View();
+           
+
+        }
+
+
+
+
 
     }
 }
