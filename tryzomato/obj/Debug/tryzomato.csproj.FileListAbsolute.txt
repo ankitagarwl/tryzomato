@@ -155,3 +155,12 @@ D:\working\New folder\tryzomato\tryzomato\bin\Microsoft.Owin.Security.MicrosoftA
 D:\working\New folder\tryzomato\tryzomato\obj\Debug\tryzomato.csprojResolveAssemblyReference.cache
 D:\working\New folder\tryzomato\tryzomato\obj\Debug\tryzomato.dll
 D:\working\New folder\tryzomato\tryzomato\obj\Debug\tryzomato.pdb
+D:\working\New folder\tryzomato\tryzomato\bin\MongoDB.Bson.dll
+D:\working\New folder\tryzomato\tryzomato\bin\MongoDB.Driver.Core.dll
+D:\working\New folder\tryzomato\tryzomato\bin\MongoDB.Driver.dll
+D:\working\New folder\tryzomato\tryzomato\bin\MongoDB.Driver.Legacy.dll
+D:\working\New folder\tryzomato\tryzomato\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\working\New folder\tryzomato\tryzomato\bin\MongoDB.Bson.xml
+D:\working\New folder\tryzomato\tryzomato\bin\MongoDB.Driver.xml
+D:\working\New folder\tryzomato\tryzomato\bin\MongoDB.Driver.Core.xml
+D:\working\New folder\tryzomato\tryzomato\bin\MongoDB.Driver.Legacy.xml

@@ -1,0 +1,39 @@
+﻿@model List<playerslist>
+@{
+    ViewBag.Title = "ar";
+}
+
+<h2>List</h2>
+<table width="90%" border="1" style="border-color:black;border:10px; border-width:thick;">
+    <tr>
+        <td>Photo</td>
+        <td>name</td>
+        <td>position</td>
+        <td>age</td>
+        <td>birthdate</td>
+        <td>birthplace</td>
+        
+
+    </tr>
+    @{
+        foreach (playerslist p in Model)
+        {
+
+            <tr>
+                <td><img src="@p.imageUrl" /></td>
+                <td>@p.name</td>
+                <td>@p.position</td>
+                <td>@p.age</td>
+                <td>@p.birthdate</td>
+                <td>@p.birthplace</td>
+                
+                
+                
+                
+                
+
+            </tr>
+        }
+    }
+
+</table>
