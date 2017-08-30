@@ -152,7 +152,6 @@ D:\working\New folder\tryzomato\tryzomato\bin\Microsoft.Owin.Security.OAuth.xml
 D:\working\New folder\tryzomato\tryzomato\bin\Microsoft.Owin.Security.Google.xml
 D:\working\New folder\tryzomato\tryzomato\bin\Microsoft.Owin.Security.Twitter.xml
 D:\working\New folder\tryzomato\tryzomato\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\working\New folder\tryzomato\tryzomato\obj\Debug\tryzomato.csprojResolveAssemblyReference.cache
 D:\working\New folder\tryzomato\tryzomato\obj\Debug\tryzomato.dll
 D:\working\New folder\tryzomato\tryzomato\obj\Debug\tryzomato.pdb
 D:\working\New folder\tryzomato\tryzomato\bin\MongoDB.Bson.dll
@@ -164,3 +163,4 @@ D:\working\New folder\tryzomato\tryzomato\bin\MongoDB.Bson.xml
 D:\working\New folder\tryzomato\tryzomato\bin\MongoDB.Driver.xml
 D:\working\New folder\tryzomato\tryzomato\bin\MongoDB.Driver.Core.xml
 D:\working\New folder\tryzomato\tryzomato\bin\MongoDB.Driver.Legacy.xml
+D:\working\New folder\tryzomato\tryzomato\obj\Debug\tryzomato.csprojResolveAssemblyReference.cache

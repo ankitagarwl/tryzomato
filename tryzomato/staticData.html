@@ -31,8 +31,8 @@
                             </div>
                         </div>
                         <div class="ptop">
-                            <!--  <input type="button"  id="ld-login-back" class="ui button left" value="&lsaquo; Back" /> -->
-                            <input type="submit" id="ld-submit-global" class="zomato-form-button login-submit-btn ui red massive button fluid" value="Log in">
+                            <!--" window.location = '/Category/zomatologin?username=a?password=b'"--> 
+                            <input type="button" id="ld-submit-global"  onclick="callEvent()" class="zomato-form-button login-submit-btn ui red massive button fluid" value="Log in">
                         </div>
 
                         <div class="clear"></div>
@@ -257,6 +257,11 @@
             // $(".signup-verif-success hidden login-section ta-center").css('display', 'none');
 
         });
+
+
+        //$("#ld-submit-global").click(function () {
+        //    alert('opopo');
+        //});
 
         
 

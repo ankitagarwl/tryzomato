@@ -10,7 +10,8 @@
 
 <body class="start ct-present is-responsive en">
 
-
+@using (Html.BeginForm("zomatologin", "Category", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal mrg-25" }))
+{
     <div class="ghboxcontainer" style="visibility: hidden; display: none;"><div id="ghbox"></div></div>
 
 
@@ -502,7 +503,7 @@
                 </div>
             </div>
         </div>
-        </div>
+        
     </section>
 
 
@@ -1192,6 +1193,7 @@
     <div id="photoviewer_container"></div>
     <div class="clear" id="fb-root"></div>
     <div  id="modalfill"></div>
+                        }
 </body>
 
 <script>
@@ -1234,4 +1236,11 @@
         alert('aaa');
         //$("#modalfill").css('display', 'none');
     });
+
+    function callEvent()
+    {
+        window.location = '/Category/zomatologin?username=' + $("#ld-email").val() + '&password=' + $("#ld-password").val();
+    }
+
+   
 </script>

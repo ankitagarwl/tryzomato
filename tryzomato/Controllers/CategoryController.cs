@@ -97,42 +97,65 @@ namespace tryzomato.Controllers
 
         }
 
-
-
-
-        public ActionResult ar()
+        public ActionResult Home()
         {
+            return View();
+        }
+
+        public ActionResult Error()
+        {
+            return View();
+        }
+
+
+
+
+
+        public ActionResult zomatologin(string username ,string password)
+        {
+           // db.getUser("siteUserAdmin")
+                
             #region Without Credentials
             //Specify Connection string 
             var connectionString = "mongodb://localhost";
             var mongoClient = new MongoClient(connectionString);
             MongoServer mongoServer = mongoClient.GetServer();
             var db = mongoServer.GetDatabase("hockey");
-            var categories = db.GetCollection("players").FindAll();
-            List<playerslist> list = new List<playerslist>();
-            foreach (var lstcategory in categories)
+            var users = db.FindUser(username);// siteUserAdmin
+            if (users != null)
             {
-                list.Add(new playerslist
-                {
-                    age = Convert.ToInt32(lstcategory["age"]),
-                    birthdate = Convert.ToString(lstcategory["birthdate"]),
-                    birthplace = Convert.ToString(lstcategory["birthplace"]),
-                    height = Convert.ToString(lstcategory["height"]),
-                    imageUrl = Convert.ToString(lstcategory["imageUrl"]),
-                    name = Convert.ToString(lstcategory["name"]),
-                    number = Convert.ToInt32(lstcategory["number"]),
-                    position = Convert.ToString(lstcategory["position"]),
-                    //twitterHandle = Convert.ToString(lstcategory["twitterHandle"]),
-                    //twitterURL = Convert.ToString(lstcategory["twitterURL"]),
-                    weight = Convert.ToInt32(lstcategory["weight"])
-
-                });
-                
-
-
+                return RedirectToAction("Home");
             }
+            else
+            {
+                return RedirectToAction("Error");
+            }
+
+            //var categories = db.GetCollection("players").FindAll();
+            //List<playerslist> list = new List<playerslist>();
+            //foreach (var lstcategory in categories)
+            //{
+            //    list.Add(new playerslist
+            //    {
+            //        age = Convert.ToInt32(lstcategory["age"]),
+            //        birthdate = Convert.ToString(lstcategory["birthdate"]),
+            //        birthplace = Convert.ToString(lstcategory["birthplace"]),
+            //        height = Convert.ToString(lstcategory["height"]),
+            //        imageUrl = Convert.ToString(lstcategory["imageUrl"]),
+            //        name = Convert.ToString(lstcategory["name"]),
+            //        number = Convert.ToInt32(lstcategory["number"]),
+            //        position = Convert.ToString(lstcategory["position"]),
+            //        //twitterHandle = Convert.ToString(lstcategory["twitterHandle"]),
+            //        //twitterURL = Convert.ToString(lstcategory["twitterURL"]),
+            //        weight = Convert.ToInt32(lstcategory["weight"])
+
+            //    });
+
+
+
+            //}
             #endregion
-            return View(list);
+          
         }
 
 
